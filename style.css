@@ -13,8 +13,43 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 .content-section { padding: 50px 10%; max-width: 1000px; margin: 0 auto; }
 .section-title { text-align: center; color: var(--dark); }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.card { background: var(--bg); padding: 20px; border-radius: 8px; text-align: center; border-bottom: 3px solid var(--blue); }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Damit das Bild an den Ecken abgerundet wird */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Verhindert, dass die Bilder verzerrt werden */
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    color: var(--dark);
+    margin-top: 0;
+    font-size: 1.2rem;
+}
 
 .contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--bg); padding: 30px; border-radius: 10px; }
 .form-row { display: flex; gap: 15px; }
