@@ -9,9 +9,7 @@
     --text-color: #333;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -52,8 +50,9 @@ nav ul li a:hover { color: var(--blue); }
 nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 
 /* =========================================
-   BANNER (HERO SEKTION)
+   BANNER (HERO SEKTIONEN)
    ========================================= */
+/* Standard Banner für Unterseiten */
 .hero { 
     background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), 
                 url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg') center/cover; 
@@ -67,10 +66,10 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     padding: 20px;
 }
 
-/* Spezifisches Banner für die Startseite mit deinem Logo-Bild */
+/* Spezielles Banner NUR für die Startseite (index.html) */
 .index-hero {
-    background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), 
-                url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo.jpeg') center/cover;
+    background: linear-gradient(rgba(0,51,102,0.5), rgba(0,51,102,0.5)), 
+                url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo.jpeg') center/cover !important;
 }
 
 .badge {
@@ -87,10 +86,9 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 
 .sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
 .content-section { padding: 50px 5%; max-width: 1100px; margin: 0 auto; text-align: center; }
-.section-title { text-align: center; color: var(--dark); margin-bottom: 30px; font-size: 2rem; }
 
 /* =========================================
-   LEISTUNGEN GRID & CARDS
+   LEISTUNGEN GRID & CARDS (PC & HANDY FIX)
    ========================================= */
 .grid {
     display: grid;
@@ -106,12 +104,7 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
 }
-
-.card:hover { transform: translateY(-10px); }
 
 .card img {
     width: 100%;
@@ -120,19 +113,14 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     display: block;
 }
 
-.card-content { padding: 20px; text-align: center; flex-grow: 1; }
-.card-content h3 { color: var(--dark); margin-top: 0; font-size: 1.2rem; }
-
 /* =========================================
-   BUTTONS & FORMULAR
+   BUTTONS & MODALS
    ========================================= */
 .btn { 
     background: var(--blue); 
     color: white; 
     padding: 15px 30px; 
-    border: none; 
     border-radius: 5px; 
-    cursor: pointer; 
     text-decoration: none; 
     display: inline-block; 
     font-weight: bold;
@@ -140,13 +128,6 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 }
 .btn:hover { background: #004494; transform: scale(1.05); }
 
-.contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--bg-light); padding: 30px; border-radius: 10px; }
-.form-row { display: flex; gap: 15px; }
-.contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%; box-sizing: border-box; font-family: inherit; }
-
-/* =========================================
-   MODAL (INFO-BOXEN)
-   ========================================= */
 .modal {
     display: none; 
     position: fixed; 
@@ -164,19 +145,10 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     width: 90%;
     max-width: 800px;
     position: relative;
-    line-height: 1.8;
     text-align: left;
 }
 
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 40px;
-    cursor: pointer;
-    color: #888;
-}
-
+.close { position: absolute; right: 20px; top: 10px; font-size: 40px; cursor: pointer; color: #888; }
 .clickable { cursor: pointer; }
 
 /* =========================================
@@ -189,8 +161,7 @@ footer a { color: white; text-decoration: none; margin: 0 10px; }
    MOBIL-OPTIMIERUNG
    ========================================= */
 @media (max-width: 768px) {
-    .form-row { flex-direction: column; }
-    header { flex-direction: column; text-align: center; }
+    header { flex-direction: column; }
     nav ul { margin-top: 15px; }
     .hero h1 { font-size: 1.6rem; }
     .grid { grid-template-columns: 1fr; }
