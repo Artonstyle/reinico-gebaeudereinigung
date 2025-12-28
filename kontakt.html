@@ -19,31 +19,83 @@
         </nav>
     </header>
 
-    <main class="content-section">
-        <h2 class="section-title">Kontaktieren Sie uns</h2>
-        <form class="contact-form">
-            <div class="form-row">
-                <input type="text" placeholder="Vorname" required>
-                <input type="text" placeholder="Nachname" required>
-            </div>
-            <input type="tel" placeholder="Telefon">
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
-            
-            <div class="spam-check">
-                <label><input type="checkbox" required> Spamschutz *</label><br>
-                <label><input type="checkbox" required> Ich willige ein, dass diese Website meine Informationen speichert... (Datenschutz) *</label>
-            </div>
-            
-            <button type="submit" class="btn">Absenden</button>
-        </form>
+    <section class="sub-header">
+        <h1>Kontaktieren Sie uns</h1>
+        <p>Wir freuen uns auf Ihre Anfrage und beraten Sie gerne individuell.</p>
+    </section>
 
-        <div class="maps-container">
-            <h3>Unser Standort</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.888!2d6.9!3d50.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDU0JzAwLjAiTiA2wrA1NCc0MC4wIkU!5e0!3m2!1sde!2sde!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <main class="content-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Ihre Ansprechpartner</h2>
+                <p>Haben Sie Fragen zu unseren Leistungen oder wünschen Sie ein unverbindliches Angebot?</p>
+                
+                <div class="info-item">
+                    <strong>E-Mail:</strong>
+                    <p><a href="mailto:info@reinico-gebäudereinigung.de">info@reinico-gebäudereinigung.de</a></p>
+                </div>
+                
+                <div class="info-item">
+                    <strong>Telefon:</strong>
+                    <p>+49 (0) XXX XXXXXXX</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Bürozeiten:</strong>
+                    <p>Mo - Fr: 08:00 - 17:00 Uhr</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/XXXXX" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Vorname *</label>
+                            <input type="text" name="vorname" required placeholder="Ihr Vorname">
+                        </div>
+                        <div class="input-group">
+                            <label>Nachname *</label>
+                            <input type="text" name="nachname" required placeholder="Ihr Nachname">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Telefon</label>
+                        <input type="tel" name="telefon" placeholder="Für Rückfragen">
+                    </div>
+
+                    <div class="input-group">
+                        <label>E-Mail *</label>
+                        <input type="email" name="email" required placeholder="ihre@email.de">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Ihre Nachricht *</label>
+                        <textarea name="nachricht" rows="5" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                    </div>
+
+                    <div class="spam-check">
+                        <label>
+                            <input type="checkbox" required> 
+                            <span>Ich willige ein, dass diese Website meine Informationen speichert, sodass meine Anfrage beantwortet werden kann. *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn">Anfrage jetzt absenden</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 class="section-title">Unser Standort</h2>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.6!2d8.6!3d49.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDMwJzAwLjAiTiA4wrAzNicwMC4wIkU!5e0!3m2!1sde!2sde!4v123456789" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </main>
 
-    <footer><p>&copy; 2024 Reinico-Gebäudereinigung</p></footer>
+    <footer>
+        <p>© 2026 Reinico-Gebäudereinigung | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
 </body>
 </html>
