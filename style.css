@@ -1,18 +1,78 @@
-:root { --blue: #0056b3; --dark: #003366; --bg: #f4f7f9; }
-body { font-family: sans-serif; margin: 0; color: #333; background: #fff; line-height: 1.6; }
-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.logo { font-size: 24px; font-weight: bold; color: var(--blue); text-decoration: none; }
+/* =========================================
+   GRUNDLAGEN & FARBEN
+   ========================================= */
+:root { 
+    --blue: #0056b3; 
+    --dark: #003366; 
+    --bg-light: #f4f7f9; 
+    --white: #ffffff;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box; /* Wichtig für korrekte Breitenberechnung */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: var(--text-color); 
+    background: #fff; 
+    line-height: 1.6; 
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 5%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--blue); 
+    text-decoration: none; 
+    text-transform: uppercase;
+}
 .logo span { color: var(--dark); }
-nav ul { display: flex; list-style: none; padding: 0; }
+
+nav ul { display: flex; list-style: none; padding: 0; margin: 0; }
 nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #555; font-weight: 500; }
+nav ul li a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; padding: 5px 0; }
+nav ul li a:hover { color: var(--blue); }
 nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 
-.hero { background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('hero.jpg') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
-.sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
-.content-section { padding: 50px 10%; max-width: 1000px; margin: 0 auto; }
-.section-title { text-align: center; color: var(--dark); }
+/* =========================================
+   BANNER & SEKTIONEN
+   ========================================= */
+.hero { 
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg') center/cover; 
+    height: 50vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+    padding: 20px;
+}
 
+.sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
+.content-section { padding: 50px 5%; max-width: 1100px; margin: 0 auto; }
+.section-title { text-align: center; color: var(--dark); margin-bottom: 30px; font-size: 2rem; }
+
+/* =========================================
+   LEISTUNGEN GRID & CARDS (BILD-FIX)
+   ========================================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -23,39 +83,95 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 .card {
     background: #fff;
     border-radius: 12px;
-    overflow: hidden; /* Damit das Bild an den Ecken abgerundet wird */
+    overflow: hidden; /* Schneidet zu große Bilder am Rand ab */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
+.card:hover { transform: translateY(-10px); }
 
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Verhindert, dass die Bilder verzerrt werden */
+    width: 100%;       /* Bild füllt Kartenbreite */
+    height: 250px;     /* Einheitliche Höhe für alle Bilder */
+    object-fit: cover; /* WICHTIG: Bild wird eingepasst ohne Verzerrung */
     display: block;
 }
 
-.card-content {
-    padding: 20px;
+.card-content { padding: 20px; text-align: center; flex-grow: 1; }
+.card-content h3 { color: var(--dark); margin-top: 0; font-size: 1.2rem; }
+
+/* =========================================
+   KONTAKTFORMULAR & MAPS
+   ========================================= */
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    background: var(--bg-light); 
+    padding: 30px; 
+    border-radius: 10px; 
+}
+
+.form-row { display: flex; gap: 15px; }
+
+.contact-form input, .contact-form textarea { 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.btn { 
+    background: var(--blue); 
+    color: white; 
+    padding: 15px 25px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-weight: bold;
+    transition: 0.3s;
     text-align: center;
 }
+.btn:hover { background: var(--dark); }
 
-.card-content h3 {
-    color: var(--dark);
-    margin-top: 0;
-    font-size: 1.2rem;
+.spam-check { font-size: 0.9rem; color: #666; }
+.maps-container { margin-top: 50px; text-align: center; }
+
+/* =========================================
+   REFEERENZEN & INFO
+   ========================================= */
+.feiertag-text { 
+    background: #f9f9f9; 
+    padding: 25px; 
+    border-left: 5px solid var(--blue); 
+    text-align: left; 
+    margin-top: 20px;
 }
+.feiertag-text ul { padding-left: 20px; }
 
-.contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--bg); padding: 30px; border-radius: 10px; }
-.form-row { display: flex; gap: 15px; }
-.contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%; box-sizing: border-box; }
-.btn { background: var(--blue); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
+/* =========================================
+   FOOTER
+   ========================================= */
+footer { text-align: center; padding: 40px; background: #222; color: #999; margin-top: 50px; }
+footer a { color: white; text-decoration: none; margin: 0 10px; }
 
-.feiertag-text { background: #f9f9f9; padding: 20px; border-left: 5px solid var(--blue); text-align: left; }
-.maps-container { margin-top: 50px; }
-footer { text-align: center; padding: 30px; background: #222; color: #999; margin-top: 50px; }
+/* =========================================
+   MOBIL-OPTIMIERUNG (RESONSIVE)
+   ========================================= */
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; gap: 15px; }
+    header { flex-direction: column; text-align: center; }
+    nav ul { margin-top: 15px; }
+    nav ul li { margin: 0 10px; }
+    .hero h1 { font-size: 1.8rem; }
+    .grid { grid-template-columns: 1fr; } /* Nur eine Karte pro Zeile auf Handys */
+}
