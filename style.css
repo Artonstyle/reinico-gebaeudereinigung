@@ -71,7 +71,7 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 /* Spezielles Banner nur für die Startseite (index.html) */
 /* KEIN linear-gradient mehr -> KEIN blauer Schatten */
 .index-hero {
-    background: url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo1.jpg') center/cover !important;
+    background: url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo1.png') center/cover !important;
     height: 65vh; 
     background-color: #fff; /* Falls Bild nicht lädt, weißer Hintergrund */
 }
