@@ -10,7 +10,7 @@
 }
 
 * {
-    box-sizing: border-box; /* Wichtig für korrekte Breitenberechnung */
+    box-sizing: border-box;
 }
 
 body { 
@@ -52,10 +52,11 @@ nav ul li a:hover { color: var(--blue); }
 nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 
 /* =========================================
-   BANNER & SEKTIONEN
+   BANNER (HERO SEKTION)
    ========================================= */
 .hero { 
-    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg') center/cover; 
+    background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), 
+                url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg') center/cover; 
     height: 50vh; 
     display: flex; 
     flex-direction: column; 
@@ -66,12 +67,30 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     padding: 20px;
 }
 
+/* Spezifisches Banner für die Startseite mit deinem Logo-Bild */
+.index-hero {
+    background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), 
+                url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo.jpeg') center/cover;
+}
+
+.badge {
+    background: #ffcc00;
+    color: var(--dark);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 .sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
-.content-section { padding: 50px 5%; max-width: 1100px; margin: 0 auto; }
+.content-section { padding: 50px 5%; max-width: 1100px; margin: 0 auto; text-align: center; }
 .section-title { text-align: center; color: var(--dark); margin-bottom: 30px; font-size: 2rem; }
 
 /* =========================================
-   LEISTUNGEN GRID & CARDS (BILD-FIX)
+   LEISTUNGEN GRID & CARDS
    ========================================= */
 .grid {
     display: grid;
@@ -83,7 +102,7 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 .card {
     background: #fff;
     border-radius: 12px;
-    overflow: hidden; /* Schneidet zu große Bilder am Rand ab */
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border: 1px solid #eee;
@@ -95,9 +114,9 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 .card:hover { transform: translateY(-10px); }
 
 .card img {
-    width: 100%;       /* Bild füllt Kartenbreite */
-    height: 250px;     /* Einheitliche Höhe für alle Bilder */
-    object-fit: cover; /* WICHTIG: Bild wird eingepasst ohne Verzerrung */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     display: block;
 }
 
@@ -105,33 +124,12 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 .card-content h3 { color: var(--dark); margin-top: 0; font-size: 1.2rem; }
 
 /* =========================================
-   KONTAKTFORMULAR & MAPS
+   BUTTONS & FORMULAR
    ========================================= */
-.contact-form { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
-    background: var(--bg-light); 
-    padding: 30px; 
-    border-radius: 10px; 
-}
-
-.form-row { display: flex; gap: 15px; }
-
-.contact-form input, .contact-form textarea { 
-    padding: 12px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
-    width: 100%; 
-    box-sizing: border-box; 
-    font-size: 1rem;
-    font-family: inherit;
-}
-
 .btn { 
     background: var(--blue); 
     color: white; 
-    padding: 15px 25px; 
+    padding: 15px 30px; 
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -139,51 +137,21 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     display: inline-block; 
     font-weight: bold;
     transition: 0.3s;
-    text-align: center;
 }
-.btn:hover { background: var(--dark); }
+.btn:hover { background: #004494; transform: scale(1.05); }
 
-.spam-check { font-size: 0.9rem; color: #666; }
-.maps-container { margin-top: 50px; text-align: center; }
+.contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--bg-light); padding: 30px; border-radius: 10px; }
+.form-row { display: flex; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%; box-sizing: border-box; font-family: inherit; }
 
 /* =========================================
-   REFEERENZEN & INFO
+   MODAL (INFO-BOXEN)
    ========================================= */
-.feiertag-text { 
-    background: #f9f9f9; 
-    padding: 25px; 
-    border-left: 5px solid var(--blue); 
-    text-align: left; 
-    margin-top: 20px;
-}
-.feiertag-text ul { padding-left: 20px; }
-
-/* =========================================
-   FOOTER
-   ========================================= */
-footer { text-align: center; padding: 40px; background: #222; color: #999; margin-top: 50px; }
-footer a { color: white; text-decoration: none; margin: 0 10px; }
-
-/* =========================================
-   MOBIL-OPTIMIERUNG (RESONSIVE)
-   ========================================= */
-@media (max-width: 768px) {
-    .form-row { flex-direction: column; gap: 15px; }
-    header { flex-direction: column; text-align: center; }
-    nav ul { margin-top: 15px; }
-    nav ul li { margin: 0 10px; }
-    .hero h1 { font-size: 1.8rem; }
-    .grid { grid-template-columns: 1fr; } /* Nur eine Karte pro Zeile auf Handys */
-}
-/* MODAL STYLES */
 .modal {
     display: none; 
     position: fixed; 
     z-index: 2000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
+    left: 0; top: 0; width: 100%; height: 100%; 
     background-color: rgba(0,0,0,0.8);
     overflow-y: auto;
 }
@@ -197,6 +165,7 @@ footer a { color: white; text-decoration: none; margin: 0 10px; }
     max-width: 800px;
     position: relative;
     line-height: 1.8;
+    text-align: left;
 }
 
 .close {
@@ -208,14 +177,21 @@ footer a { color: white; text-decoration: none; margin: 0 10px; }
     color: #888;
 }
 
-.close:hover { color: var(--blue); }
+.clickable { cursor: pointer; }
 
-.clickable {
-    cursor: pointer;
-    border: 1px solid #ddd;
-}
+/* =========================================
+   FOOTER
+   ========================================= */
+footer { text-align: center; padding: 40px; background: #222; color: #999; margin-top: 50px; }
+footer a { color: white; text-decoration: none; margin: 0 10px; }
 
-.clickable:hover {
-    border-color: var(--blue);
-    background-color: #f9f9f9;
+/* =========================================
+   MOBIL-OPTIMIERUNG
+   ========================================= */
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; }
+    header { flex-direction: column; text-align: center; }
+    nav ul { margin-top: 15px; }
+    .hero h1 { font-size: 1.6rem; }
+    .grid { grid-template-columns: 1fr; }
 }
