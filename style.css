@@ -1,0 +1,26 @@
+:root { --blue: #0056b3; --dark: #003366; --bg: #f4f7f9; }
+body { font-family: sans-serif; margin: 0; color: #333; background: #fff; line-height: 1.6; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.logo { font-size: 24px; font-weight: bold; color: var(--blue); text-decoration: none; }
+.logo span { color: var(--dark); }
+nav ul { display: flex; list-style: none; padding: 0; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #555; font-weight: 500; }
+nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
+
+.hero { background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('hero.jpg') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+.sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
+.content-section { padding: 50px 10%; max-width: 1000px; margin: 0 auto; }
+.section-title { text-align: center; color: var(--dark); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.card { background: var(--bg); padding: 20px; border-radius: 8px; text-align: center; border-bottom: 3px solid var(--blue); }
+
+.contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--bg); padding: 30px; border-radius: 10px; }
+.form-row { display: flex; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%; box-sizing: border-box; }
+.btn { background: var(--blue); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
+
+.feiertag-text { background: #f9f9f9; padding: 20px; border-left: 5px solid var(--blue); text-align: left; }
+.maps-container { margin-top: 50px; }
+footer { text-align: center; padding: 30px; background: #222; color: #999; margin-top: 50px; }
