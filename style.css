@@ -54,7 +54,7 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
 /* =========================================
    3. BANNER (HERO) - STARTSEITE & UNTERSEITEN
    ========================================= */
-/* Standard Banner für alle Unterseiten (mit blauem Filter) */
+/* Standard Banner für alle Unterseiten */
 .hero { 
     background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), 
                 url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg') center/cover; 
@@ -68,11 +68,12 @@ nav ul li a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
     padding: 20px;
 }
 
-/* Spezielles Banner nur für die INDEX (Startseite) */
-/* Hier kein Filter, da der Text schon im Bild ist */
+/* Spezielles Banner nur für die Startseite (index.html) */
+/* KEIN linear-gradient mehr -> KEIN blauer Schatten */
 .index-hero {
     background: url('https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/reinico-logo.jpg') center/cover !important;
-    height: 65vh; /* Etwas höher für das große Logo-Bild */
+    height: 65vh; 
+    background-color: #fff; /* Falls Bild nicht lädt, weißer Hintergrund */
 }
 
 .sub-header { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
