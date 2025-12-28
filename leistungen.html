@@ -21,32 +21,33 @@
 
     <section class="sub-header">
         <h1>Unsere Leistungen</h1>
+        <p>Klicken Sie auf die markierten Leistungen für detaillierte Informationen.</p>
     </section>
 
     <main class="content-section">
         <div class="grid">
             
-            <div class="card">
+            <div class="card clickable" onclick="openModal('modal-buero')">
                 <img src="https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/büroreinigung.jpeg" alt="Büroreinigung">
                 <div class="card-content">
                     <h3>Büro- / Unterhaltsreinigung</h3>
-                    <p>Regelmäßige Pflege Ihrer Geschäftsräume für ein perfektes Arbeitsklima.</p>
+                    <p>Regelmäßige Pflege für ein angenehmes Raumklima. <br><strong>Mehr erfahren +</strong></p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card clickable" onclick="openModal('modal-glas')">
                 <img src="https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/glasreinigung.jpeg" alt="Glasreinigung">
                 <div class="card-content">
                     <h3>Glasreinigung</h3>
-                    <p>Kristallklare Sicht durch fachgerechte Reinigung Ihrer Glasflächen.</p>
+                    <p>Kristallklare Sicht für Ihren gewerblichen Bereich. <br><strong>Mehr erfahren +</strong></p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card clickable" onclick="openModal('modal-bau')">
                 <img src="https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/baureinigung.jpeg" alt="Baureinigung">
                 <div class="card-content">
                     <h3>Baureinigung</h3>
-                    <p>Wir machen Ihre Baustelle bezugsfertig – gründlich und schnell.</p>
+                    <p>Beseitigung von Handwerkerschmutz nach Fertigstellung. <br><strong>Mehr erfahren +</strong></p>
                 </div>
             </div>
 
@@ -54,7 +55,7 @@
                 <img src="https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/fassadenreinigung.jpeg" alt="Fassadenreinigung">
                 <div class="card-content">
                     <h3>Fassadenreinigung</h3>
-                    <p>Schutz und Werterhalt Ihrer Immobilie durch saubere Außenwände.</p>
+                    <p>Werterhalt Ihrer Immobilie durch professionelle Außenreinigung.</p>
                 </div>
             </div>
 
@@ -90,19 +91,84 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card clickable" onclick="openModal('modal-teppich')">
                 <img src="https://raw.githubusercontent.com/Artonstyle/reinico-gebaeudereinigung/main/image/teppichbodenreinigung.jpeg" alt="Teppichreinigung">
                 <div class="card-content">
                     <h3>Teppichbodenreinigung</h3>
-                    <p>Fasertiefe Sauberkeit für Ihre textilen Bodenbeläge.</p>
+                    <p>Fasertiefe Sauberkeit und Werterhalt textiler Beläge. <br><strong>Mehr erfahren +</strong></p>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <div id="modal-buero" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-buero')">&times;</span>
+            <h2>Büroreinigung / Unterhaltsreinigung</h2>
+            <p>In Büros, Praxen und öffentlichen Gebäuden entstehen täglich unvermeidbare Verunreinigungen. Eine regelmäßige professionelle Unterhaltsreinigung sichert den guten Zustand von Immobilien und Räumlichkeiten.</p>
+            <p><strong>Das 4-Farb-System:</strong> Mit einem durchgängigen Farbsystem sorgen wir für eine klare Trennung der einzelnen Reinigungsbereiche. Jede Farbe steht für einen eigenen Bereich (z.B. Toilette getrennt von Waschbecken), um Keimübertragung zu verhindern.</p>
+            <p>Wir erarbeiten mit Ihnen die wirtschaftlichste Lösung. Umweltschutz wird bei uns großgeschrieben.</p>
+        </div>
+    </div>
+
+    <div id="modal-glas" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-glas')">&times;</span>
+            <h2>Glasreinigung (Gewerblich)</h2>
+            <p>Aktuell bieten wir die Glasreinigung ausschließlich für den gewerblichen Bereich an. Sie umfasst die Entfernung von Verschmutzungen auf Verglasungen aller Art.</p>
+            <ul>
+                <li>Fenster- & Glastürenreinigung</li>
+                <li>Glasbausteine & Glasdächer</li>
+                <li>Leuchtschriften</li>
+                <li>Reinigung mit oder ohne Rahmen</li>
+            </ul>
+            <p>Wir prüfen vorab die Reinigungsfähigkeit, um Schäden an Bauteilen zu vermeiden.</p>
+        </div>
+    </div>
+
+    <div id="modal-bau" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-bau')">&times;</span>
+            <h2>Baureinigung</h2>
+            <p>Wir beseitigen Handwerkerschmutz und Schutzfolien. Man unterscheidet zwischen:</p>
+            <p><strong>Baugrobreinigung:</strong> Entfernung von Bauschutt während der Bauzeit.</p>
+            <p><strong>Baufeinreinigung:</strong> Erfolgt nach Fertigstellung (Bauschlussreinigung). Hierbei entfernen wir Markierungen, Zementschleier, Lacke, Klebereste und feinen Handwerkerschmutz an allen Oberflächen.</p>
+        </div>
+    </div>
+
+    <div id="modal-teppich" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-teppich')">&times;</span>
+            <h2>Teppichbodenreinigung</h2>
+            <p>Die Art der Reinigung hängt von Faserart, Verlegung und Verschmutzungsgrad ab.</p>
+            <ul>
+                <li><strong>Unterhaltsreinigung:</strong> Saugen oder Klopfsaugen.</li>
+                <li><strong>Zwischenreinigung:</strong> Pulverreinigung für schnelle Einsatzbereitschaft.</li>
+                <li><strong>Grundreinigung:</strong> Shampoonierung oder Sprühextraktion für tiefensitzenden Schmutz.</li>
+            </ul>
+        </div>
+    </div>
+
     <footer>
         <p>© 2026 Reinico-Gebäudereinigung | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
     </footer>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
 </body>
 </html>
